@@ -8,9 +8,29 @@
     --green: #99ff99;
 }
 
+body{
+	background-color: var(--blue);
+	margin: 0;
+	padding: 0;
+}
+
+header, main, footer{
+	background-color: white;
+	padding: 2em;
+}
+
+header, footer{
+	min-height: 15vmin;
+}
+
+header{
+	border-bottom: 10px solid var(--green);
+}
+
 main{
     width: 80%;
     margin: 0 auto;
+	min-height: 70vmin;
 }
 
 #level{
@@ -117,4 +137,8 @@ main{
 	&:hover::-moz-range-track {
 		background: var(--green);
 	}
+}
+
+footer{
+	background-color: var(--green);
 }
