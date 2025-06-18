@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root{
+    --blue: #2222ff;
+    --green: #99ff99;
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#level{
+    text-align: center;
+    font-size: 4vw;
+}
+
+#slider{
+    -webkit-appearance: none;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+    margin: 0 auto;
+
+	&:focus {
+		outline: none;
+	}
+
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		height: 16px;
+		width: 16px;
+		border-radius: 50%;
+		background: var(--blue);
+		margin-top: -5px;
+		box-shadow: 1px 1px 2px rgba(#000, 0.5);
+
+		cursor: pointer;
+		
+	}
+
+	&::-webkit-slider-runnable-track {
+		width: 60%;
+		height: 9px;
+		background: #bdbdbd;
+		border-radius: 3rem;
+
+		transition: all 0.5s;
+		cursor: pointer;
+	}
+
+	&:hover::-webkit-slider-runnable-track {
+		background: var(--green);
+	}
+
+	&::-ms-track {
+		width: 60%;
+		cursor: pointer;
+		height: 9px;
+
+		transition: all 0.5s;
+		/* Hides the slider so custom styles can be added */
+		background: transparent;
+		border-color: transparent;
+		color: transparent;
+	}
+
+	&::-ms-thumb {
+		height: 16px;
+		width: 16px;
+		border-radius: 50%;
+		background: #ffffff;
+		margin-top: -5px;
+		box-shadow: 1px 1px 2px rgba(#000, 0.5);
+
+		cursor: pointer;
+	}
+
+	&::-ms-fill-lower {
+		background: #bdbdbd;
+		border-radius: 3rem;
+	}
+	&:focus::-ms-fill-lower {
+		background: var(--green);
+	}
+	&::-ms-fill-upper {
+		background: #bdbdbd;
+		border-radius: 3rem;
+	}
+	&:focus::-ms-fill-upper {
+		background: var(--green);
+	}
+
+	&::-moz-range-thumb {
+		height: 16px;
+		width: 16px;
+		border-radius: 50%;
+		background: #ffffff;
+		margin-top: -5px;
+		box-shadow: 1px 1px 2px rgba(#000, 0.5);
+
+		cursor: pointer;
+	}
+
+	&::-moz-range-track {
+		width: 60%;
+		height: 9px;
+		background: #bdbdbd;
+		border-radius: 3rem;
+
+		transition: all 0.5s;
+		cursor: pointer;
+	}
+	&:hover::-moz-range-track {
+		background: var(--green);
+	}
+}
