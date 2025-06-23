@@ -16,4 +16,17 @@ const changeVal = () => {
     document.querySelector("#levelDesc").innerHTML = levelInfo[level-1];
 }
 
+function copyToClip() {
+    let toCopy = document.querySelector("#output").innerHTML;
+    function listener(e) {
+        e.clipboardData.setData("text/html", toCopy);
+        e.clipboardData.setData("text/plain", toCopy);
+        e.preventDefault();
+  }
+    document.addEventListener("copy", listener);
+    document.execCommand("copy");
+    document.removeEventListener("copy", listener);
+};
+
 document.querySelector("#slider").addEventListener("change", changeVal);
+document.querySelector("#copy").addEventListener("click", copyToClip);
