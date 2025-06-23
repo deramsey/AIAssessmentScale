@@ -6,6 +6,7 @@ const levelInfo = [
     "<p>AI may be used to complete any elements of the task, with students directing AI to achieve the assessment goals. Assessments at this level may also require engagement with AI to achieve goals and solve problems.</p><p><strong><em>You may use AI extensively throughout your work either as you wish, or as specifically directed in your assessment. Focus on directing AI to achieve your goals while demonstrating your critical thinking.</em></strong></p>",
     "<p>AI is used creatively to enhance problem-solving, generate novel insights, or develop innovative solutions to solve problems. Students and educators co-design assessments to explore unique AI applications within the field of study.</p><p><strong><em>You should use AI creatively to solve the task, potentially co-designing new approaches with your instructor.</em></strong></p>"
 ]
+const icons = ["no_ai.png", "ai_idea.png", "ai_collab.png", "all_ai.png", "ai_explore.png"]
 
 document.querySelector("#levelDesc").innerHTML = levelInfo[0];
 
@@ -14,13 +15,14 @@ const changeVal = () => {
     document.querySelector("#level").innerHTML = level;
     document.querySelector("#levelTitle").innerHTML = levelTitle[level-1];
     document.querySelector("#levelDesc").innerHTML = levelInfo[level-1];
+    document.querySelector(".i").src = "./resources/icons/"+icons[level-1];
 }
 
 function copyToClip() {
     let toCopy = document.querySelector("#output").innerHTML;
     function listener(e) {
         e.clipboardData.setData("text/html", toCopy);
-        e.clipboardData.setData("text/plain", toCopy);
+        //e.clipboardData.setData("text/plain", toCopy);
         e.preventDefault();
   }
     document.addEventListener("copy", listener);

@@ -4,8 +4,8 @@
 }
 
 :root{
-    --blue: #2222ff;
-    --green: #99ff99;
+    --blue: #02559d;
+    --green: #81c336;
 }
 
 body{
@@ -27,6 +27,11 @@ header{
 	border-bottom: 10px solid var(--green);
 }
 
+h1{
+	font-size: 3vmax;
+	text-align: center;
+}
+
 main{
     width: 80%;
     margin: 0 auto;
@@ -36,6 +41,20 @@ main{
 #level{
     text-align: center;
     font-size: 4vw;
+}
+
+#title_format{
+	display: grid;
+	grid-template-columns: 1fr 8fr;
+	margin-top: 2rem;
+	gap: 1.2rem;
+	align-content: baseline;
+	justify-content: baseline;
+}
+
+.i {
+	width: 100%;
+	display: block;
 }
 
 #slider{
@@ -142,4 +161,21 @@ main{
 
 footer{
 	background-color: var(--green);
+}
+
+button{
+	background-color: white;
+	color: var(--blue);
+	border: 1px solid var(--blue);
+	padding: 6px;
+}
+
+button:active{
+	background-color: var(--green);
+	color: black;
+}
+
+#cc_info{
+	font-size: .8em;
+	text-align: center;
 }

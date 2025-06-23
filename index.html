@@ -5,21 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Assessment Scale</title>
     <link rel="stylesheet" href="./resources/styles.css" />
+    <link rel="preload" href="./resources/icons/ai_idea.png" as="image" type="image/png" />
+    <link rel="preload" href="./resources/icons/ai_explore.png" as="image" type="image/png" />
+    <link rel="preload" href="./resources/icons/ai_collab.png" as="image" type="image/png" />
+    <link rel="preload" href="./resources/icons/all_ai.png" as="image" type="image/png" />
 </head>
 <body>
     <header>
-        <h1></h1>
+        <h1>AI Assessment Scale</h1>
     </header>
     <main>
     <p id="level">1</p>
     <input type="range" min="1" max="5" id="slider" value="1" />
     <div id="output">
+    <div id="title_format">
+    <img class="i" src="./resources/icons/no_ai.png" alt="" />
     <h2 id="levelTitle">No AI</h2>
+    </div>
     <section id="levelDesc"></section>
     </div>
     <button id="copy">Copy to Clipboard</button>
     </main>
-    <footer></footer>
+    <footer>
+        <p id="cc_info">Adapted from <a href="https://aiassessmentscale.com">The AI Assessment Scale</a> © 2024 by <a href="https://creativecommons.org">Perkins, Furze, Roe, & MacVaugn</a>, licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"></p>
+    </footer>
 
     <script src="./resources/script.js"></script>
 </body>
