@@ -35,10 +35,16 @@ async function copyToClip() {
             imageBlobs.push(imageBlob);
         }
 
+        const tempElement = document.createElement('div');
+        tempElement.innerHTML = document.querySelector("#output").innerHTML;
+        const plainText = tempElement.textContent || tempElement.innerText || '';
+        const textBlob = new Blob([plainText], { type: 'text/plain' });
+
         // Create a new ClipboardItem with the content and images
         const clipboardItem = new ClipboardItem({
             'text/html': htmlBlob,
-            'image/png': imageBlobs.length > 0 ? imageBlobs[0] : undefined  // if there are images
+            'image/png': imageBlobs.length > 0 ? imageBlobs[0] : undefined , // if there are images
+            'text/plain':textBlob
         });
 
         // Write the content to the clipboard
